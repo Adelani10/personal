@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        montserrat: ['var(--font-montserrat)', 'sans-serif'], // Add Montserrat here
+        inconsolata: ['var(--font-inconsolata)', 'sans-serif'], // Add Montserrat here
+      },
     },
   },
   plugins: [],
