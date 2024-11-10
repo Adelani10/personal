@@ -4,7 +4,7 @@ import { FiChevronRight } from "react-icons/fi";
 
 const About = () => {
   return (
-    <section className="py-16 md:p-24 lg:p-48 sm:p-12 flex flex-col gap-y-12">
+    <section className="py-16 md:p-20 lg:p-48 sm:p-12 flex flex-col gap-y-12">
       <div className="flex items-center gap-x-5">
         <h1 className="md:text-2xl text-xl lg:min-w-[0%] min-w-[50%] sm:min-w-[40%] font-semibold text-sky-300">
           01. <span className="md:text-3xl text-2xl text-gray-300 font-bold">About me</span>
@@ -26,7 +26,7 @@ const About = () => {
             focused software engineer, equipped with proven track record of
             creating and implementing successful web and mobile applications. I
             have also recently started writing about technology in general,
-            which I find super interesting and awesome.
+            which I find super interesting.
           </p>
           <p>
             My main focus these days is seeking organizations with a local or

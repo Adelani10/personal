@@ -2,6 +2,7 @@
 
 import About from "./components/about";
 import EmailDesign from "./components/emailDesign";
+import Experience from "./components/experience";
 import Hero from "./components/hero";
 import Links from "./components/links";
 import Nav from "./components/nav";
@@ -15,6 +16,7 @@ export default function Home() {
         <Links />
         <Hero />
         <About />
+        <Experience />
       </div>
     </div>
   );
