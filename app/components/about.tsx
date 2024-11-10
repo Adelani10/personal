@@ -6,17 +6,17 @@ const About = () => {
   return (
     <section className="py-16 md:p-24 lg:p-48 sm:p-12 flex flex-col gap-y-12">
       <div className="flex items-center gap-x-5">
-        <h1 className="text-2xl font-semibold text-sky-300">
-          01. <span className="text-3xl text-gray-300 font-bold">About me</span>
+        <h1 className="md:text-2xl text-xl lg:min-w-[0%] min-w-[50%] sm:min-w-[40%] font-semibold text-sky-300">
+          01. <span className="md:text-3xl text-2xl text-gray-300 font-bold">About me</span>
         </h1>
 
-        <hr className="w-72 border-b-[0px] translate-y-full border-gray-800" />
+        <hr className="md:w-72 w-full border-b-[0px] translate-y-full border-gray-800" />
       </div>
 
       <div className="flex gap-x-3 flex-col md:justify-between md:flex-row gap-y-8 md:gap-y-0 items-start">
         <article className="md:max-w-[65%] w-full text-gray-300 space-y-3">
           <p>
-            Hello! My name is Delani and I enjoy creating things that live on
+            I enjoy creating things that live on
             the internet. My interest in web and mobile development started back
             in 2022 when I got dangerously curious about how the web works.
           </p>
@@ -84,12 +84,12 @@ const About = () => {
           </div>
         </article>
 
-        <div className="w-72  md:mt-3 self-center md:self-start border-sky-200 border-2  relative h-72 rounded-md">
+        <div className="sm:w-72 w-48  md:mt-3 self-center md:self-start border-sky-200 border-2 relative sm:h-72 h-48 rounded-md">
           <Image
             alt="Ade"
             fill
             src={"/profile1.jpg"}
-            className="object-cover -translate-x-3 -translate-y-3 hover:-translate-y-5  hover:-translate-x-5 transition-all duration-500 ease-in-out  rounded-md"
+            className="object-cover -translate-x-3 -translate-y-3 hover:-translate-y-5  hover:-translate-x-5 transition-all duration-500 ease-in-out h-full rounded-md"
           />
         </div>
       </div>
