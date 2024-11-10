@@ -6,6 +6,7 @@ import Experience from "./components/experience";
 import Hero from "./components/hero";
 import Links from "./components/links";
 import Nav from "./components/nav";
+import Works from "./components/works";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
+        <Works />
       </div>
     </div>
   );
