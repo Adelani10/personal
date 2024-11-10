@@ -3,7 +3,7 @@ import React from "react";
 
 const EmailDesign = () => {
   return (
-    <div className="md:flex hidden flex-col text-gray-400 pr-16 fixed gap-y-8 bottom-0 right-0 items-center">
+    <div className="md:flex hidden flex-col text-gray-300 pr-16 fixed gap-y-8 bottom-0 right-0 items-center">
       {/* Email text written vertically */}
       <Link href={"mailTo:harounadelani@gmail.com"} className="flex flex-col">
         {"harounadelani@gmail.com".split("").map((char, index) => (

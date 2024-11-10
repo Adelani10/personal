@@ -30,7 +30,7 @@ const data = [
 
 const Links = () => {
   return (
-    <div className="fixed md:flex pl-16 text-gray-400 flex-col hidden gap-y-8 left-0 bottom-0 items-center">
+    <div className="fixed md:flex pl-16 text-gray-300 flex-col hidden gap-y-8 left-0 bottom-0 items-center">
       <div className="flex flex-col gap-y-8 text-xl items-center">
         {data.map((icon) => {
           return (

@@ -25,7 +25,7 @@ const data = [
 
 const Nav = () => {
   return (
-    <section className="h-20 fixed left-0 right-0 md:mx-16 px-6 md:px-0 bg-black shadow-b-sm shadow-white flex items-center justify-between">
+    <section className="h-20 fixed z-50 left-0 right-0 text-gray-300 md:mx-16 px-6 md:px-0 bg-black shadow-b-sm shadow-white flex items-center justify-between">
       <div className=" pr-2 border-sky-300 tracking-tighter shadow-xl hover:scale-105   hover:scale-x-100 hover:shadow-[4px_4px_3px_0px_rgba(56,189,248,0.8)] transition-all duration-500 ease-in-out">
         {/* <Image
           alt="Ade"
@@ -37,9 +37,7 @@ const Nav = () => {
           className=" object-contain "
         /> */}
 
-        <h1 className="text-4xl text-sky-300">
-            🅰
-        </h1>
+        <h1 className="text-4xl text-sky-300">🅰</h1>
       </div>
 
       <div>
@@ -58,15 +56,17 @@ const Nav = () => {
               );
             })}
           </div>
-          <button
-            onClick={() => window.open("/resume.pdf", "_blank")}
-            className="border border-sky-300 p-2 px-4  text-sky-300 rounded-md
-            shadow-xl hover:scale-105   hover:scale-x-100 hover:shadow-[4px_4px_3px_0px_rgba(56,189,248,0.8)] transition-all duration-500 ease-in-out"
-          >
-            <a href="resume.pdf" download target="_blank">
-              Resume
-            </a>
-          </button>
+
+          <div className="bg-sky-300 rounded-md">
+            <button
+              onClick={() => window.open("/resume.pdf", "_blank")}
+              className="border border-sky-300 p-2 px-4  text-sky-300 rounded-md bg-black hover:-translate-x-1 hover:-translate-y-1 transition-all duration-500 ease-in-out"
+            >
+              <a href="resume.pdf" download target="_blank">
+                Resume
+              </a>
+            </button>
+          </div>
         </div>
 
         <button className="sm:hidden text-sky-300 text-3xl">
