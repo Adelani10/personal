@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Montserrat, Inconsolata } from "next/font/google";
 import { AppContextProvider } from "@/context";
+import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${inconsolata.variable} antialiased`}
       >
+        <link rel="icon" href="/ade_logo.png" />
         <AppContextProvider>{children}</AppContextProvider>
       </body>
     </html>

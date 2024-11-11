@@ -1,17 +1,19 @@
-"uce client"
+"uce client";
 import { useAppContext } from "@/context";
 import React, { useState } from "react";
 import { FiChevronRight } from "react-icons/fi";
 
-
-
 const Experience = () => {
   const [index, setIndex] = useState<number>(0);
-  const {experienceData} = useAppContext()
+  const [show, setShow] = useState<boolean>(false);
+  const { experienceData } = useAppContext();
 
   const { name, role, duration, bulletPoints } = experienceData[index];
   return (
-    <section id="experience" className="py-16 md:px-20 md:pt-24 lg:px-72 sm:px-12 flex flex-col gap-y-12">
+    <section
+      id="experience"
+      className="py-16 md:px-20 md:pt-24 lg:px-72 sm:px-12 flex flex-col gap-y-12"
+    >
       <div className="flex items-center gap-x-5">
         <h1 className="md:text-2xl text-xl lg:min-w-[0%] min-w-[60%] sm:max-w-[50%] font-semibold text-sky-300">
           02.{" "}
@@ -52,14 +54,28 @@ const Experience = () => {
           </div>
 
           <div className="flex flex-col gap-y-3">
-            {bulletPoints.map((point, index) => {
-              return (
-                <div key={index} className="flex items-center gap-x-2">
-                  <FiChevronRight className="text-sky-300 text-2xl" />
-                  <p>{point}</p>
-                </div>
-              );
-            })}
+            {bulletPoints.length > 3 && !show
+              ? bulletPoints.slice(0, 3).map((point, index) => {
+                  return (
+                    <div key={index} className="flex items-center gap-x-2">
+                      <FiChevronRight className="text-sky-300 text-2xl" />
+                      <p>{point}</p>
+                    </div>
+                  );
+                })
+              : bulletPoints.map((point, index) => {
+                  return (
+                    <div key={index} className="flex items-center gap-x-2">
+                      <FiChevronRight className="text-sky-300 text-2xl" />
+                      <p>{point}</p>
+                    </div>
+                  );
+                })}
+            {bulletPoints.length > 3 && (
+              <button onClick={() => setShow(!show)} className="text-sky-300">
+                show more
+              </button>
+            )}
           </div>
         </div>
       </div>

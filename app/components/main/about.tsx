@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import { FiChevronRight } from "react-icons/fi";
 import Tech from "../extras/tech";
 
 const About = () => {
@@ -39,19 +38,12 @@ const About = () => {
       <div className="flex gap-x-3 flex-col md:justify-between md:flex-row gap-y-8 md:gap-y-0 items-start">
         <article className="md:max-w-[65%] w-full text-gray-300 space-y-3">
           <p>
-            I enjoy creating things that live on the internet. My interest in
-            web and mobile development started back in 2022 when I got
-            dangerously curious about how the web works.
-          </p>
-
-          <p>
-            Fast-forward to today, I’m a creative, detail-oriented, customer
+            I'm detail-oriented, customer
             focused software engineer, equipped with proven track record of
             creating and implementing successful web and mobile applications. I
-            have also recently started writing about technology in general,
-            which I find super interesting.
+            have also recently started writing about technology, which I find super interesting.
           </p>
-          <p>
+          <p className="md:inline-block hidden">
             My main focus these days is seeking organizations with a local or
             global reach where I can leverage my skills and build accessible,
             inclusive products and digital experiences.
@@ -73,6 +65,7 @@ const About = () => {
           <Image
             alt="Ade"
             fill
+            sizes="any"
             src={"/profile1.jpg"}
             className="object-cover -translate-x-3 -translate-y-3 hover:-translate-y-5  hover:-translate-x-5 transition-all duration-300 ease-in-out h-full rounded-md"
           />
