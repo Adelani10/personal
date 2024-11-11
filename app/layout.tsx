@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Montserrat, Inconsolata } from "next/font/google";
+import { AppContextProvider } from "@/context";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,7 +24,7 @@ const montserrat = Montserrat({
 const inconsolata = Inconsolata({
   subsets: ["latin"],
   weight: ["400", "700", "900"],
-  variable: "--font-inconsolata"
+  variable: "--font-inconsolata",
 });
 
 export const metadata: Metadata = {
@@ -41,7 +42,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${inconsolata.variable} antialiased`}
       >
-        {children}
+        <AppContextProvider>{children}</AppContextProvider>
       </body>
     </html>
   );

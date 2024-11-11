@@ -1,14 +1,30 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { FiChevronRight } from "react-icons/fi";
+import Tech from "../extras/tech";
 
 const About = () => {
   const [overlay, setOverlay] = useState<boolean>(true);
 
-  console.log(overlay);
+  const data = [
+    "Html/Css",
+    "Tailwind/Bootstrap",
+    "Docker",
+    "Javascript (ES6+)",
+    "Typescript",
+    "Java",
+    "React/Nextjs",
+    "Solidity",
+    "Spring Framework",
+    "Git/Github",
+    "Databases (Sql, MongoDb)",
+  ];
 
   return (
-    <section className="py-16 md:p-20 lg:p-48 sm:p-12 flex flex-col gap-y-12">
+    <section
+      id="about"
+      className="py-16 md:p-20 lg:p-48 sm:p-12 flex flex-col gap-y-12"
+    >
       <div className="flex items-center gap-x-5">
         <h1 className="md:text-2xl text-xl lg:min-w-[0%] min-w-[50%] sm:min-w-[40%] font-semibold text-sky-300">
           01.{" "}
@@ -42,52 +58,10 @@ const About = () => {
           </p>
           <p>Here are a few technologies I’ve been working with recently:</p>
 
-          <div className="flex items-center text-sm md:text-[10px] md:font-bold lg:text-lg lg:gap-x-2 gap-x-3 lg:text-md">
-            <div>
-              <div className="flex items-center gap-x-1">
-                <FiChevronRight className="text-sky-300" />
-                <p>Html / Css</p>
-              </div>
-              <div className="flex items-center gap-x-1">
-                <FiChevronRight className="text-sky-300" />
-                <p>Tailwind / Bootstrap</p>
-              </div>
-              <div className="flex items-center gap-x-1">
-                <FiChevronRight className="text-sky-300" />
-                <p>Javascript (ES6+)</p>
-              </div>
-              <div className="flex items-center gap-x-1">
-                <FiChevronRight className="text-sky-300" />
-                <p>Typescript</p>
-              </div>
-              <div className="flex items-center gap-x-1">
-                <FiChevronRight className="text-sky-300" />
-                <p>React / Nextjs</p>
-              </div>
-            </div>
-
-            <div>
-              <div className="flex items-center gap-x-1">
-                <FiChevronRight className="text-sky-300" />
-                <p>Java</p>
-              </div>
-              <div className="flex items-center gap-x-1">
-                <FiChevronRight className="text-sky-300" />
-                <p>Spring Framework</p>
-              </div>
-              <div className="flex items-center gap-x-1">
-                <FiChevronRight className="text-sky-300" />
-                <p>Databases (Sql, MongoDb)</p>
-              </div>
-              <div className="flex items-center gap-x-1">
-                <FiChevronRight className="text-sky-300" />
-                <p>Docker</p>
-              </div>
-              <div className="flex items-center gap-x-1">
-                <FiChevronRight className="text-sky-300" />
-                <p>Git / Github</p>
-              </div>
-            </div>
+          <div className="flex flex-wrap gap-1">
+            {data.map((tech) => {
+              return <Tech key={tech} name={tech} />;
+            })}
           </div>
         </article>
 
