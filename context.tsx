@@ -1,47 +1,139 @@
 "use client";
-import { Dispatch, ReactNode, SetStateAction, createContext, useContext, useState } from "react";
+import {
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  createContext,
+  useContext,
+  useState,
+} from "react";
 import { FiGithub, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
 
 export interface ContextTypes {
   showSideBar: boolean;
   setShowSideBar: Dispatch<SetStateAction<boolean>>;
-  navData: navDataTypes[]
-  iconData: iconDataTypes[]
-  experienceData: experienceDataTypes[]
+  navData: navDataTypes[];
+  iconData: iconDataTypes[];
+  experienceData: experienceDataTypes[];
+  prjData: prjDataTypes[];
 }
 
 interface experienceDataTypes {
-    id: number;
-    name: string;
-    role: string;
-    duration: string;
-    bulletPoints: any[]
+  id: number;
+  name: string;
+  role: string;
+  duration: string;
+  bulletPoints: any[];
 }
 
 export interface navDataTypes {
-    id: number;
-    name: string;
-    page: string;
+  id: number;
+  name: string;
+  page: string;
+}
+
+export interface prjDataTypes {
+  id: number;
+  name: string;
+  description: string;
+  link: string;
+  live: string;
+  image: string;
+  tech: string[];
 }
 
 export interface iconDataTypes {
-    id: number;
-    name: string;
-    tag: ReactNode;
-    link: string
+  id: number;
+  name: string;
+  tag: ReactNode;
+  link: string;
 }
+const prjData: prjDataTypes[] = [
+  {
+    id: 0,
+    name: "shoppingify",
+    description:
+      "Web application that allows users to create, manage, and store shopping lists efficiently. Built with a Spring Boot backend and a Next.js frontend, the app enables users to add, update, and delete items on their shopping lists with ease. Key features include user authentication, item categorization, and a responsive user interface for seamless interaction across devices.",
+    link: "https://github.com/Adelani10/shoppingListFE",
+    live: "https://shopping-list-fe-nu.vercel.app/",
+    image: "/shoppingify.png",
+    tech: [
+      "Nextjs",
+      "Tailwind",
+      "SpringBoot",
+      "Typescript",
+      "MongoDb",
+      "Docker",
+    ],
+  },
+
+  {
+    id: 1,
+    name: "martiful",
+    description:
+      "This crypto website provides a seamless way to trade or convert any crypto asset directly into Naira. With real-time exchange rates and secure transactions, it offers users a simple, efficient bridge to liquidity in Nigeria. The platform’s streamlined process ensures fast conversions, empowering users to manage digital assets easily.",
+    link: "",
+    live: "https://martiful.vercel.app/",
+    image: "/martiful.png",
+    tech: ["Nextjs", "Tailwind", "Typescript"],
+  },
+
+  {
+    id: 2,
+    name: "Musica",
+    description:
+      "A full-stack video sharing platform built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
+    link: "https://github.com/Adelani10/musica",
+    live: "https://ab-musica.netlify.app/",
+    image: "/musica.png",
+    tech: [
+      "React",
+      "Tailwind",
+    ],
+  },
+
+  {
+    id: 3,
+    name: "ClipFicks",
+    description:
+      "A full-stack video sharing platform built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
+    link: "https://github.com/Adelani10/clipFlicks",
+    live: "None",
+    image: "",
+    tech: [
+      "React-Native",
+      "Tailwind",
+      "SpringBoot",
+      "Typescript",
+      "MongoDb",
+      "Docker",
+    ],
+  },
+
+  {
+    id: 4,
+    name: "QuizUp",
+    description:
+      "An Educative quiz application. Questions & answers fetched from an external source. On submit, users can see corrections of questions failed, as well as their total score for each section.",
+    link: "https://github.com/Adelani10/quizGame",
+    live: "https://test-your-general-knowledge.netlify.app/",
+    image: "/quizup.png",
+    tech: ["React", "Tailwind"],
+  },
+
+];
 
 const AppContext = createContext<ContextTypes | null>(null);
 
 export const useAppContext = () => {
-    const context = useContext(AppContext)
-    if(!context) {
-        throw new Error("useAppContext must be used within AppContextProvider")
-    }
-    return context
-}
+  const context = useContext(AppContext);
+  if (!context) {
+    throw new Error("useAppContext must be used within AppContextProvider");
+  }
+  return context;
+};
 
-export const AppContextProvider = ({ children }: any ) => {
+export const AppContextProvider = ({ children }: any) => {
   const [showSideBar, setShowSideBar] = useState<boolean>(false);
   const navData: navDataTypes[] = [
     {
@@ -113,7 +205,7 @@ export const AppContextProvider = ({ children }: any ) => {
         "Served as Team lead while delivering our capstone project with explicit consciousness of deadline and inclusive distribution of tasks.",
         "Participated in weekly code reviews and feedback sessions, improving coding proficiency and gaining insights into real-world development workflows.",
         "Utilized Git and GitHub for version control, ensuring smooth project collaboration and code consistency across the team.",
-        "Documented frontend processes and provided onboarding support for new team members, contributing to knowledge sharing and team efficiency."
+        "Documented frontend processes and provided onboarding support for new team members, contributing to knowledge sharing and team efficiency.",
       ],
     },
     {
@@ -143,12 +235,21 @@ export const AppContextProvider = ({ children }: any ) => {
         "Integrated JWT and OAuth2 for secure user authentication and authorization, ensuring data privacy and system security.",
         "Collaborated with clients on Upwork to gather requirements, scope out projects, and deliver custom solutions on time and within budget.",
         "Created and deployed a shopping list management app with a Spring Boot backend and Next.js frontend, implementing features like item tracking, user history, and saved lists.",
-        "Managed and optimized MongoDB and PostgreSQL databases to support high-traffic applications, improving data retrieval times and system performance."
-      ]
+        "Managed and optimized MongoDB and PostgreSQL databases to support high-traffic applications, improving data retrieval times and system performance.",
+      ],
     },
   ];
   return (
-    <AppContext.Provider value={{ showSideBar, setShowSideBar, navData, iconData, experienceData }}>
+    <AppContext.Provider
+      value={{
+        showSideBar,
+        setShowSideBar,
+        navData,
+        iconData,
+        experienceData,
+        prjData,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

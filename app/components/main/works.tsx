@@ -19,6 +19,23 @@ const data = [
     ],
   },
   {
+    id: 1,
+    name: "shoppingify",
+    description:
+      "This web application allows users to create, manage, and store shopping lists efficiently. Built with a Spring Boot backend and a Next.js frontend, the app enables users to add, update, and delete items on their shopping lists with ease. Key features include user authentication, item categorization, and a responsive user interface for seamless interaction across devices.",
+    link: "https://github.com/Adelani10/shoppingListFE",
+    live: "https://shopping-list-fe-nu.vercel.app/",
+    image: "",
+    tech: [
+      "Nextjs",
+      "Tailwind",
+      "SpringBoot",
+      "Typescript",
+      "MongoDb",
+      "Docker",
+    ],
+  },
+  {
     id: 2,
     name: "Musica",
     description:
