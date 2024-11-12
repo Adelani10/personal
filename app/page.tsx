@@ -12,9 +12,8 @@ import Works from "./components/main/works";
 
 export default function Home() {
   return (
-    <div className="font-[family-name:var(--font-geist-sans)] relative bg-black h-screen overflow-x-scroll ">
+    <div className="font-[family-name:var(--font-geist-sans)] relative bg-black h-screen ">
       <Nav />
-      <Side />
       <div className="h-full md:mx-16 px-6 text-gray-300 mt-20 md:px-0 font-inconsolata">
         <EmailDesign />
         <Links />

@@ -48,80 +48,7 @@ export interface iconDataTypes {
   tag: ReactNode;
   link: string;
 }
-const prjData: prjDataTypes[] = [
-  {
-    id: 0,
-    name: "shoppingify",
-    description:
-      "Web application that allows users to create, manage, and store shopping lists efficiently. Built with a Spring Boot backend and a Next.js frontend, the app enables users to add, update, and delete items on their shopping lists with ease. Key features include user authentication, item categorization, and a responsive user interface for seamless interaction across devices.",
-    link: "https://github.com/Adelani10/shoppingListFE",
-    live: "https://shopping-list-fe-nu.vercel.app/",
-    image: "/shoppingify.png",
-    tech: [
-      "Nextjs",
-      "Tailwind",
-      "SpringBoot",
-      "Typescript",
-      "MongoDb",
-      "Docker",
-    ],
-  },
 
-  {
-    id: 1,
-    name: "martiful",
-    description:
-      "This crypto website provides a seamless way to trade or convert any crypto asset directly into Naira. With real-time exchange rates and secure transactions, it offers users a simple, efficient bridge to liquidity in Nigeria. The platform’s streamlined process ensures fast conversions, empowering users to manage digital assets easily.",
-    link: "",
-    live: "https://martiful.vercel.app/",
-    image: "/martiful.png",
-    tech: ["Nextjs", "Tailwind", "Typescript"],
-  },
-
-  {
-    id: 2,
-    name: "Musica",
-    description:
-      "A full-stack video sharing platform built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
-    link: "https://github.com/Adelani10/musica",
-    live: "https://ab-musica.netlify.app/",
-    image: "/musica.png",
-    tech: [
-      "React",
-      "Tailwind",
-    ],
-  },
-
-  {
-    id: 3,
-    name: "ClipFicks",
-    description:
-      "A full-stack video sharing platform built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
-    link: "https://github.com/Adelani10/clipFlicks",
-    live: "None",
-    image: "",
-    tech: [
-      "React-Native",
-      "Tailwind",
-      "SpringBoot",
-      "Typescript",
-      "MongoDb",
-      "Docker",
-    ],
-  },
-
-  {
-    id: 4,
-    name: "QuizUp",
-    description:
-      "An Educative quiz application. Questions & answers fetched from an external source. On submit, users can see corrections of questions failed, as well as their total score for each section.",
-    link: "https://github.com/Adelani10/quizGame",
-    live: "https://test-your-general-knowledge.netlify.app/",
-    image: "/quizup.png",
-    tech: ["React", "Tailwind"],
-  },
-
-];
 
 const AppContext = createContext<ContextTypes | null>(null);
 
@@ -239,6 +166,82 @@ export const AppContextProvider = ({ children }: any) => {
       ],
     },
   ];
+
+  const prjData: prjDataTypes[] = [
+    {
+      id: 0,
+      name: "shoppingify",
+      description:
+        "Web application that allows users to create, manage, and store shopping lists efficiently. Built with a Spring Boot backend and a Next.js frontend, the app enables users to add, update, and delete items on their shopping lists with ease. Key features include user authentication, item categorization, and a responsive user interface for seamless interaction across devices.",
+      link: "https://github.com/Adelani10/shoppingListFE",
+      live: "https://shopping-list-fe-nu.vercel.app/",
+      image: "/shoppingify.png",
+      tech: [
+        "Nextjs",
+        "Tailwind",
+        "SpringBoot",
+        "Typescript",
+        "MongoDb",
+        "Docker",
+      ],
+    },
+  
+    {
+      id: 1,
+      name: "martiful",
+      description:
+        "Crypto website that provides a seamless way to trade or convert any crypto asset directly into Naira. With real-time exchange rates and secure transactions, it offers users a simple, efficient bridge to liquidity in Nigeria. The platform’s streamlined process ensures fast conversions, empowering users to manage digital assets easily.",
+      link: "",
+      live: "https://martiful.vercel.app/",
+      image: "/martiful.png",
+      tech: ["Nextjs", "Tailwind", "Typescript"],
+    },
+  
+    {
+      id: 2,
+      name: "Musica",
+      description:
+        "A full-stack video sharing platform built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
+      link: "https://github.com/Adelani10/musica",
+      live: "https://ab-musica.netlify.app/",
+      image: "/musica.png",
+      tech: [
+        "React",
+        "Tailwind",
+      ],
+    },
+  
+    {
+      id: 3,
+      name: "ClipFicks",
+      description:
+        "A full-stack video sharing platform built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
+      link: "https://github.com/Adelani10/clipFlicks",
+      live: "None",
+      image: "/musica.png",
+      tech: [
+        "React-Native",
+        "Tailwind",
+        "SpringBoot",
+        "Typescript",
+        "MongoDb",
+        "Docker",
+      ],
+    },
+  
+    {
+      id: 4,
+      name: "QuizUp",
+      description:
+        "An Educative quiz application. Questions & answers fetched from an external source. On submit, users can see corrections of questions failed, as well as their total score for each section.",
+      link: "https://github.com/Adelani10/quizGame",
+      live: "https://test-your-general-knowledge.netlify.app/",
+      image: "/quizup.png",
+      tech: ["React", "Tailwind"],
+    },
+  
+  ];
+
   return (
     <AppContext.Provider
       value={{

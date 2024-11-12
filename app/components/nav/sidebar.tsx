@@ -6,11 +6,13 @@ import { FiFastForward } from "react-icons/fi";
 
 const Side = () => {
   const { showSideBar, setShowSideBar, navData } = useAppContext();
+
+  console.log(showSideBar)
   return (
     <aside
       className={` ${
-        showSideBar ? "-translate-x-[]" : "translate-x-[100%]"
-      }  absolute h-full z-50 transition-all ease-in-out duration-500 right-0 bottom-0 top-0 bg-sky-950 md:hidden w-3/4 `}
+        showSideBar ? "-translate-x-[100]" : "translate-x-[100%]"
+      }  absolute h-full border z-50 transition-all ease-in-out duration-500 right-0 bottom-0 top-0 bg-sky-950 md:hidden w-3/4 `}
     >
       <div
         className={`relative flex justify-center flex-col items-center w-full h-full gap-y-16 `}

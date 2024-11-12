@@ -26,7 +26,7 @@ const Experience = () => {
       </div>
 
       <div className="flex flex-col md:flex-row md:gap-y-0 gap-x-0 md:gap-x-4  gap-y-8">
-        <div className="flex md:flex-col items-center overflow-scroll md:overflow-visible">
+        <div className="flex md:flex-col items-center overflow-x-scroll md:overflow-x-hidden">
           {experienceData.map((job) => {
             return (
               <div
