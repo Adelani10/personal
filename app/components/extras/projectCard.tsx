@@ -54,28 +54,18 @@ const ProjectCard = ({ prj }: any) => {
             </div>
 
             <div className="flex items-center text-sky-300 justify-between">
-              <button
-                onClick={() =>
-                  window.open(prj.link, "_blank", "noopener,noreferrer")
-                }
-                className="text-lg px-3"
-              >
+              <Link href={prj.live} target="_blank" className="text-lg px-3">
                 <FiGithub />
-              </button>
+              </Link>
 
-              <button
-                onClick={() =>
-                  window.open(prj.live, "_blank", "noopener,noreferrer")
-                }
-                className="text-lg px-3"
-              >
+              <Link href={prj.live} target="_blank" className="text-lg px-3">
                 <IoOpenOutline />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
 
-        <div className="absolute w-full h-full inset-0 bg-gray-600 lg:bg-black opacity-70 rounded-md mix-blend-multiply " />
+        <div className="absolute w-full h-full inset-0 bg-gray-600 lg:bg-stone-600 opacity-70 rounded-md mix-blend-multiply " />
       </div>
     </div>
   );
