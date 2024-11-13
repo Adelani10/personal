@@ -7,7 +7,6 @@ import { FiFastForward } from "react-icons/fi";
 const Side = () => {
   const { showSideBar, setShowSideBar, navData, handleScroll } = useAppContext();
 
-  console.log(showSideBar)
   return (
     <aside
       className={` ${

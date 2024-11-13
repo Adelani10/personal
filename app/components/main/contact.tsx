@@ -3,7 +3,6 @@ import React from "react";
 
 const Contact = () => {
   return (
-    // <section id="contact" className="py-16 md:p-24 sm:p-12 flex flex-col gap-y-12">
     <section id="contact" className="py-16 md:px-20 md:pt-24 lg:px-72 sm:px-12 flex flex-col gap-y-12">
       <div className="flex gap-y-3 flex-col items-center ">
         <h1 className="md:text-2xl text-xl  font-semibold text-sky-300">

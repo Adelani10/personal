@@ -1,6 +1,5 @@
 "use client";
 import { useAppContext } from "@/context";
-import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FiGithub } from "react-icons/fi";
@@ -16,14 +15,11 @@ const ProjectCard = ({ prj }: any) => {
 
 
   useEffect(() => {
-    // Set window width after component mounts
     setWindowWidth(window.innerWidth);
 
-    // Update width on resize
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
 
-    // Cleanup on unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

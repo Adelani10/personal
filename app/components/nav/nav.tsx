@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BiMenuAltRight } from "react-icons/bi";
 
 const Nav = () => {
-  const { showSideBar, setShowSideBar, navData, handleScroll } = useAppContext();
+  const { setShowSideBar, navData, handleScroll } = useAppContext();
 
   return (
     <section className="h-20 fixed top-0 z-30 left-0 right-0 text-gray-300 md:mx-16 overflow-x-hidden px-6 md:px-0 bg-black flex items-center justify-between">
