@@ -60,7 +60,7 @@ const About = () => {
         <div
           onMouseEnter={() => setOverlay(false)}
           onMouseLeave={() => setOverlay(true)}
-          className="sm:w-72 w-48 transition-all duration-300 ease-in-out  md:mt-3 self-center md:self-start border-sky-200 border-2 relative sm:h-72 h-48 rounded-md"
+          className="sm:w-72 w-48 hidden md:inline-block transition-all duration-300 ease-in-out  md:mt-3 self-center md:self-start border-sky-200 border-2 relative sm:h-72 h-48 rounded-md"
         >
           <Image
             alt="Ade"

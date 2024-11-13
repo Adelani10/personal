@@ -4,11 +4,11 @@ import Link from "next/link";
 import { BiMenuAltRight } from "react-icons/bi";
 
 const Nav = () => {
-  const { showSideBar, setShowSideBar, navData } = useAppContext();
+  const { showSideBar, setShowSideBar, navData, handleScroll } = useAppContext();
 
-  console.log(showSideBar);
   return (
-    <section className="h-20 border fixed w-full top-0 z-20 left-0 right-0 text-gray-300 md:mx-16 overflow-x-hidden px-6 md:px-0 bg-black flex items-center justify-between">
+    <section className="h-20 fixed top-0 z-30 left-0 right-0 text-gray-300 md:mx-16 overflow-x-hidden px-6 md:px-0 bg-black flex items-center justify-between">
+      
       <div className="flex items-center justify-center h-8 w-8 shadow-xl hover:scale-105 hover:shadow-[4px_4px_3px_0px_rgba(56,189,248,0.8)] rounded-md transition-all duration-300 ease-in-out">
         <p className="text-2xl h-full w-full font-bold bg-sky-300 text-black text-center rounded-md">
           A
@@ -20,7 +20,8 @@ const Nav = () => {
           {navData.map((section) => {
             return (
               <Link
-                className="hover:text-sky-300"
+              onClick={(e) => handleScroll(e, section.name)}
+                className="hover:text-sky-300 capitalize"
                 href={section.page}
                 key={section.id}
               >

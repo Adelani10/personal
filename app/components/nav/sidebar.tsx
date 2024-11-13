@@ -5,14 +5,14 @@ import React from "react";
 import { FiFastForward } from "react-icons/fi";
 
 const Side = () => {
-  const { showSideBar, setShowSideBar, navData } = useAppContext();
+  const { showSideBar, setShowSideBar, navData, handleScroll } = useAppContext();
 
   console.log(showSideBar)
   return (
     <aside
       className={` ${
-        showSideBar ? "-translate-x-[100]" : "translate-x-[100%]"
-      }  absolute h-full border z-50 transition-all ease-in-out duration-500 right-0 bottom-0 top-0 bg-sky-950 md:hidden w-3/4 `}
+        showSideBar ? "-translate-x-[]" : "translate-x-[100%]"
+      }  fixed h-full z-50 transition-all ease-in-out duration-500 right-0 bottom-0 top-0 bg-sky-950 md:hidden w-3/4 `}
     >
       <div
         className={`relative flex justify-center flex-col items-center w-full h-full gap-y-16 `}
@@ -27,7 +27,10 @@ const Side = () => {
           {navData.map((section) => {
             return (
               <Link
-                onClick={() => setShowSideBar(false)}
+                onClick={(e) => {
+                  handleScroll(e, section.name)
+                  setShowSideBar(false)
+                }}
                 className="hover:text-sky-300 flex flex-col items-center  gap-y-1 tracking-widest gap-x-0"
                 href={section.page}
                 key={section.id}

@@ -1,6 +1,8 @@
+import { useAppContext } from "@/context";
 import React from "react";
 
 const Hero = () => {
+  const {handleScroll} = useAppContext()
   return (
     <section className="">
       <div className=" py-16 md:p-24 sm:p-12 flex flex-col gap-y-12">
@@ -19,10 +21,11 @@ const Hero = () => {
 
         <div className="bg-sky-300 rounded-md md:max-w-72 max-w-[70%]">
           <button
+          onClick={(e) => handleScroll(e, "works")}
             className="border border-sky-300 py-4 w-full px-2  text-sky-300 rounded-md bg-black hover:-translate-x-1 hover:-translate-y-1 
             transition-all duration-500 ease-in-out"
           >
-            Check out my blog!
+            Check out my projects!
           </button>
         </div>
       </div>

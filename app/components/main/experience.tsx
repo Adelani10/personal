@@ -12,7 +12,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="py-16 md:px-20 md:pt-24 lg:px-72 sm:px-12 flex flex-col gap-y-12"
+      className="py-16 md:px-20 md:pt-24 lg:px-48 xl:px-72 sm:px-12 flex flex-col gap-y-12"
     >
       <div className="flex items-center gap-x-5">
         <h1 className="md:text-2xl text-xl lg:min-w-[0%] min-w-[60%] sm:max-w-[50%] font-semibold text-sky-300">
@@ -25,18 +25,18 @@ const Experience = () => {
         <hr className="lg:w-72 w-full border-b-[0px] translate-y-full border-gray-800" />
       </div>
 
-      <div className="flex flex-col md:flex-row md:gap-y-0 gap-x-0 md:gap-x-4  gap-y-8">
-        <div className="flex md:flex-col items-center overflow-x-scroll md:overflow-x-hidden">
+      <div className="flex flex-col md:flex-row md:gap-y-0 gap-x-0 md:gap-x-4 gap-y-8">
+        <div className="flex md:flex-col items-center  md:min-w-36 overflow-x-scroll">
           {experienceData.map((job) => {
             return (
               <div
                 key={job.id}
                 onClick={() => setIndex(job.id)}
-                className={`text-sky-300 py-2 px-5 w-24 md:w-36 text-center ${
+                className={`text-sky-300 py-2 px-5 w-24 md:w-full text-center ${
                   index === job.id
                     ? "border-sky-300  bg-gray-800"
                     : "border-gray-500"
-                } transition-all ease-in-out duration-500 rounded-t-sm font-semibold hover:bg-gray-800 cursor-pointer border-b-2 md:border-b-0 md:border-l-2`}
+                } transition-all ease-in-out duration-300 rounded-t-sm font-semibold hover:bg-gray-800 cursor-pointer border-b-2 md:border-b-0 md:border-l-2`}
               >
                 {job.name}
               </div>

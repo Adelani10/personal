@@ -1,6 +1,8 @@
 "use client";
+import { useRouter } from "next/navigation";
 import {
   Dispatch,
+  FormEvent,
   ReactNode,
   SetStateAction,
   createContext,
@@ -16,6 +18,11 @@ export interface ContextTypes {
   iconData: iconDataTypes[];
   experienceData: experienceDataTypes[];
   prjData: prjDataTypes[];
+  next: () => void;
+  prev: () => void;
+  index: number;
+  setIndex: Dispatch<SetStateAction<number>>;
+  handleScroll: (e: FormEvent, targetId: string) => void;
 }
 
 interface experienceDataTypes {
@@ -49,7 +56,6 @@ export interface iconDataTypes {
   link: string;
 }
 
-
 const AppContext = createContext<ContextTypes | null>(null);
 
 export const useAppContext = () => {
@@ -61,26 +67,27 @@ export const useAppContext = () => {
 };
 
 export const AppContextProvider = ({ children }: any) => {
+  const router = useRouter();
   const [showSideBar, setShowSideBar] = useState<boolean>(false);
   const navData: navDataTypes[] = [
     {
       id: 1,
-      name: "About",
+      name: "about",
       page: "#about",
     },
     {
       id: 2,
-      name: "Experience",
+      name: "experience",
       page: "#experience",
     },
     {
       id: 3,
-      name: "Work",
+      name: "works",
       page: "#works",
     },
     {
       id: 4,
-      name: "Contact",
+      name: "contact",
       page: "#contact",
     },
   ];
@@ -170,9 +177,9 @@ export const AppContextProvider = ({ children }: any) => {
   const prjData: prjDataTypes[] = [
     {
       id: 0,
-      name: "shoppingify",
+      name: "Shoppingify",
       description:
-        "Web application that allows users to create, manage, and store shopping lists efficiently. Built with a Spring Boot backend and a Next.js frontend, the app enables users to add, update, and delete items on their shopping lists with ease. Key features include user authentication, item categorization, and a responsive user interface for seamless interaction across devices.",
+        "Web application that allows users to create, manage, & store shopping lists efficiently. Built with Spring Boot/Nextjs, the app enables users to add, update, & delete items on their shopping lists with ease. Key features include user authentication, item categorization, & a responsive user interface for seamless interaction across devices.",
       link: "https://github.com/Adelani10/shoppingListFE",
       live: "https://shopping-list-fe-nu.vercel.app/",
       image: "/shoppingify.png",
@@ -185,7 +192,7 @@ export const AppContextProvider = ({ children }: any) => {
         "Docker",
       ],
     },
-  
+
     {
       id: 1,
       name: "martiful",
@@ -196,29 +203,30 @@ export const AppContextProvider = ({ children }: any) => {
       image: "/martiful.png",
       tech: ["Nextjs", "Tailwind", "Typescript"],
     },
-  
     {
       id: 2,
-      name: "Musica",
+      name: "NftMarketplace",
       description:
-        "A full-stack video sharing platform built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
-      link: "https://github.com/Adelani10/musica",
-      live: "https://ab-musica.netlify.app/",
-      image: "/musica.png",
+        "NFT marketplace that allows users to buy, sell, and explore digital collectibles with ease. The platform integrates blockchain technology for secure transactions and features a user-friendly design for seamless browsing and trading.",
+      link: "https://github.com/Adelani10/nftmarketplace",
+      live: "https://nft-fe-umber.vercel.app/",
+      image: "/marketplace.png",
       tech: [
-        "React",
+        "Solidity",
         "Tailwind",
+        "Typescript",
+        "Nextjs",
       ],
     },
-  
+
     {
       id: 3,
       name: "ClipFicks",
       description:
-        "A full-stack video sharing platform built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
+        "A full-stack video sharing app built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
       link: "https://github.com/Adelani10/clipFlicks",
-      live: "None",
-      image: "/musica.png",
+      live: "https://www.figma.com/proto/UtiX2BwFI1lGE13nACitu0/ClipFlicks?node-id=2-15",
+      image: "/clipFlicks.png",
       tech: [
         "React-Native",
         "Tailwind",
@@ -228,10 +236,10 @@ export const AppContextProvider = ({ children }: any) => {
         "Docker",
       ],
     },
-  
+
     {
       id: 4,
-      name: "QuizUp",
+      name: "Quizzical",
       description:
         "An Educative quiz application. Questions & answers fetched from an external source. On submit, users can see corrections of questions failed, as well as their total score for each section.",
       link: "https://github.com/Adelani10/quizGame",
@@ -239,8 +247,36 @@ export const AppContextProvider = ({ children }: any) => {
       image: "/quizup.png",
       tech: ["React", "Tailwind"],
     },
-  
+
+    {
+        id: 5,
+        name: "Musica",
+        description:
+          "A full-stack video sharing platform built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
+        link: "https://github.com/Adelani10/musica",
+        live: "https://ab-musica.netlify.app/",
+        image: "/musica.png",
+        tech: ["React", "Tailwind"],
+      },
   ];
+
+  const [index, setIndex] = useState<number>(0);
+
+  const next = () => {
+    setIndex((prev) => (index === prjData.length - 1 ? 0 : prev + 1));
+  };
+
+  const prev = () => {
+    setIndex((prev) => (index === 0 ? prjData.length - 1 : index - 1));
+  };
+
+  const handleScroll = (e: FormEvent, targetId: string) => {
+    e.preventDefault();
+
+    document.getElementById(targetId)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   return (
     <AppContext.Provider
@@ -251,6 +287,11 @@ export const AppContextProvider = ({ children }: any) => {
         iconData,
         experienceData,
         prjData,
+        next,
+        prev,
+        index,
+        setIndex,
+        handleScroll,
       }}
     >
       {children}
