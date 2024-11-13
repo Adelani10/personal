@@ -1,3 +1,5 @@
+"use client"
+
 // components/FadeInWhenVisible.js
 import { motion } from "framer-motion";
 
