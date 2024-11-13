@@ -2,25 +2,39 @@
 import { useAppContext } from "@/context";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FiGithub } from "react-icons/fi";
 import { IoOpenOutline } from "react-icons/io5";
 
 const ProjectCard = ({ prj }: any) => {
   const { index } = useAppContext();
+  const [windowWidth, setWindowWidth] = useState<number>(0)
 
   const shiftAmt = (id: number) => {
     return id * 100;
   };
 
+
+  useEffect(() => {
+    // Set window width after component mounts
+    setWindowWidth(window.innerWidth);
+
+    // Update width on resize
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       style={{
-        left: window.innerWidth < 1024 ? `${shiftAmt(prj.id)}%` : 0,
+        left: windowWidth < 1024 ? `${shiftAmt(prj.id)}%` : 0,
         transform:
-          window.innerWidth < 1024 ? `translateX(-${index * 100}%)` : "none",
+          windowWidth < 1024 ? `translateX(-${index * 100}%)` : "none",
       }}
-      className="absolute lg:static w-full h-full rounded-md ease-in-out transition-all duration-500 top-0 bottom-0 right-0"
+      className={`absolute lg:static w-full h-full rounded-md ease-in-out transition-all duration-500 top-0 bottom-0 right-0`}
     >
       <div className="relative lg:flex gap-x-8 w-full h-full lg:h-64 rounded-md   ">
         <Link href={prj.live} className="rounded-md lg:w-96  w-full h-full">
