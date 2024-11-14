@@ -205,9 +205,9 @@ export const AppContextProvider = ({ children }: any) => {
     },
     {
       id: 2,
-      name: "NftMarketplace",
+      name: "Durkio",
       description:
-        "NFT marketplace that allows users to buy, sell, and explore digital collectibles with ease. The platform integrates blockchain technology for secure transactions and features a user-friendly design for seamless browsing and trading.",
+        "NFT marketplace that allows users to buy, sell, and explore digital collectibles in sepolia ETH with ease. The platform integrates blockchain technology for secure transactions and features a user-friendly design for seamless browsing and trading.",
       link: "https://github.com/Adelani10/nftmarketplace",
       live: "https://nft-fe-umber.vercel.app/",
       image: "/marketplace.png",
