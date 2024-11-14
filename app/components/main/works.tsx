@@ -25,7 +25,7 @@ const Works = () => {
       <div className="flex flex-col lg:flex-row w-full gap-y-4 lg:gap-y-0">
         <div
           className={
-            "shadow-sm lg:shadow-none xl:px-24 lg:space-y-12 shadow-sky-300 w-full rounded-md overflow-x-scroll h-72 md:overflow-x-hidden lg:h-full relative"
+            "shadow-md lg:shadow-none xl:px-24 lg:space-y-12 shadow-gray-800 w-full rounded-md overflow-x-hidden h-[500px] lg:h-full relative"
           }
         >
           {prjData.map((prj) => {

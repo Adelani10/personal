@@ -179,7 +179,7 @@ export const AppContextProvider = ({ children }: any) => {
       id: 0,
       name: "Shoppingify",
       description:
-        "Web application that allows users to create, manage, & store shopping lists efficiently. Built with Spring Boot/Nextjs, the app enables users to add, update, & delete items on their shopping lists with ease. Key features include user authentication, item categorization, & a responsive user interface for seamless interaction across devices.",
+        "This application allows users to create, manage, & store shopping lists efficiently. Built with Spring Boot/Nextjs, the app enables users to add, update, & delete items on their shopping lists with ease. Key features include user authentication, item categorization, & a responsive user interface for seamless interaction across devices.",
       link: "https://github.com/Adelani10/shoppingListFE",
       live: "https://shopping-list-fe-nu.vercel.app/",
       image: "/shoppingify.png",
@@ -211,12 +211,7 @@ export const AppContextProvider = ({ children }: any) => {
       link: "https://github.com/Adelani10/nftmarketplace",
       live: "https://nft-fe-umber.vercel.app/",
       image: "/marketplace.png",
-      tech: [
-        "Solidity",
-        "Tailwind",
-        "Typescript",
-        "Nextjs",
-      ],
+      tech: ["Solidity", "Tailwind", "Typescript", "Nextjs"],
     },
 
     {
@@ -225,7 +220,7 @@ export const AppContextProvider = ({ children }: any) => {
       description:
         "A full-stack video sharing app built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
       link: "https://github.com/Adelani10/clipFlicks",
-      live: "https://www.figma.com/proto/UtiX2BwFI1lGE13nACitu0/ClipFlicks?node-id=2-15",
+      live: "https://expo.dev/preview/update?message=fixes&updateRuntimeVersion=1.0.0&createdAt=2024-09-29T15%3A55%3A18.016Z&slug=exp&projectId=1b9b1673-ffa7-49b0-9be8-fc3c6a952ae5&group=eaf028b7-73c6-40d5-8622-75dfbb42708b",
       image: "/clipFlicks.png",
       tech: [
         "React-Native",
@@ -249,15 +244,15 @@ export const AppContextProvider = ({ children }: any) => {
     },
 
     {
-        id: 5,
-        name: "Musica",
-        description:
-          "A full-stack video sharing platform built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
-        link: "https://github.com/Adelani10/musica",
-        live: "https://ab-musica.netlify.app/",
-        image: "/musica.png",
-        tech: ["React", "Tailwind"],
-      },
+      id: 5,
+      name: "Musica",
+      description:
+        "A full-stack video sharing platform built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
+      link: "https://github.com/Adelani10/musica",
+      live: "https://ab-musica.netlify.app/",
+      image: "/musica.png",
+      tech: ["React", "Tailwind"],
+    },
   ];
 
   const [index, setIndex] = useState<number>(0);
