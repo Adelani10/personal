@@ -29,50 +29,66 @@ const ProjectCard = ({ prj }: any) => {
         left: windowWidth < 1024 ? `${shiftAmt(prj.id)}%` : 0,
         transform: windowWidth < 1024 ? `translateX(-${index * 100}%)` : "none",
       }}
-      className={`absolute flex flex-col lg:flex-row lg:gap-x-8 gap-x-0 w-full lg:h-64 lg:static h-full rounded-md ease-in-out transition-all duration-500 top-0 bottom-0 left-0 right-0`}
+      className={`absolute w-full lg:h-64 lg:static h-full rounded-md ease-in-out transition-all duration-500 top-0 bottom-0 left-0 right-0`}
     >
-      <div className="rounded-md lg:w-96 w-full h-[50%] lg:min-h-0 lg:h-full">
-        <img src={prj.image} className="rounded-md w-full h-full" alt="image" />
-      </div>
-
       <div
-        className={` p-3 lg:p-0 flex w-full flex-col h-[50%] justify-around lg:justify-normal space-y-2 lg:space-y-4 text-gray-300 z-20`}
+        onClick={() => {
+          if (typeof window !== undefined) {
+            window.open(prj.live, "_blank");
+          }
+        }}
+        className="flex flex-col cursor-pointer lg:flex-row lg:gap-x-8 gap-x-0 h-full w-full"
       >
-        <h3 className="font-semibold text-xl md:text-2xl text-white capitalize">
-          {prj.name}
-        </h3>
+        <div className="rounded-md lg:w-1/2 w-full h-[50%] lg:min-h-0 lg:h-full">
+          <img
+            src={prj.image}
+            className="rounded-md w-full h-full"
+            alt="image"
+          />
+        </div>
 
-        <p className="text-xs md:text-sm tracking-tighter text-white lg:text-gray-300 leading-4">
-          {prj.description}
-        </p>
+        <div
+          className={` p-3 lg:p-0 flex flex-col h-[50%] lg:h-full w-full lg:w-1/2 justify-around lg:justify-normal space-y-2 lg:space-y-4 text-gray-300 z-20`}
+        >
+          <h3 className="font-semibold text-xl md:text-2xl text-white capitalize">
+            {prj.name}
+          </h3>
 
-        <div className="gap-y-1 items-center flex flex-col md:flex-row md:gap-y-2">
-          <div className="flex w-full font-semibold text-sm flex-wrap gap-x-1">
-            {prj.tech.map((tech: string) => (
-              <h3 key={tech}>
-                {prj.tech[prj.tech.length - 1] === tech
-                  ? `${tech}.`
-                  : `${tech},`}
-              </h3>
-            ))}
-          </div>
+          <p className="text-xs md:text-sm tracking-tighter text-white lg:text-gray-300 leading-4">
+            {prj.description}
+          </p>
 
-          <div className="flex items-center text-sky-300 justify-between">
-            <Link
-              href={prj.live}
-              target="_blank"
-              className="text-lg inline-block px-3"
+          <div className="gap-y-1 items-center flex flex-col md:flex-row md:gap-y-2">
+            <div className="flex w-full font-semibold text-sm flex-wrap gap-x-1">
+              {prj.tech.map((tech: string) => (
+                <h3 key={tech}>
+                  {prj.tech[prj.tech.length - 1] === tech
+                    ? `${tech}.`
+                    : `${tech},`}
+                </h3>
+              ))}
+            </div>
+
+            <div
+              onClick={(e: any) => e.stopPropagation()}
+              className="flex items-center text-sky-300 justify-between"
             >
-              <FiGithub />
-            </Link>
+              <Link
+                href={prj.link}
+                target="_blank"
+                className="text-lg inline-block px-3"
+              >
+                <FiGithub />
+              </Link>
 
-            <Link
-              href={prj.live}
-              target="_blank"
-              className="text-lg inline-block px-3"
-            >
-              <IoOpenOutline />
-            </Link>
+              <Link
+                href={prj.live}
+                target="_blank"
+                className="text-lg inline-block px-3"
+              >
+                <IoOpenOutline />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

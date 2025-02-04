@@ -73,7 +73,7 @@ const Experience = () => {
                 })}
             {bulletPoints.length > 3 && (
               <button onClick={() => setShow(!show)} className="text-sky-300">
-                show more
+                {show ? "show less" : "show more"}
               </button>
             )}
           </div>

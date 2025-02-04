@@ -158,18 +158,17 @@ export const AppContextProvider = ({ children }: any) => {
     },
     {
       id: 3,
-      name: "Upwork",
-      role: "Freelance Fullstack Developer",
-      duration: "June 2022 - June 2022",
+      name: "Acehelp",
+      role: "Frontend Developer",
+      duration: "Nov 2024 - Present",
       bulletPoints: [
         "Worked with my team to develop dynamic, responsive web applications using React, Node.js, Express, and MongoDB, ensuring optimal performance and usability.",
-        "Designed and implemented RESTful APIs, facilitating seamless communication between frontend and backend for a robust user experience.",
-        "Built full-stack projects using Spring Boot and React Native, incorporating authentication, data storage, and real-time updates for cross-platform functionality.",
         "Leveraged Next.js and Tailwind CSS to create modern, SEO-optimized, and visually appealing user interfaces.",
-        "Integrated JWT and OAuth2 for secure user authentication and authorization, ensuring data privacy and system security.",
-        "Collaborated with clients on Upwork to gather requirements, scope out projects, and deliver custom solutions on time and within budget.",
-        "Created and deployed a shopping list management app with a Spring Boot backend and Next.js frontend, implementing features like item tracking, user history, and saved lists.",
-        "Managed and optimized MongoDB and PostgreSQL databases to support high-traffic applications, improving data retrieval times and system performance.",
+        "Worked on an education website with colleagues by developing session cards to display essential tutor details, booking status, and session-related information for an improved user experience.",
+        "Implemented and maintained tutor guarantor settings, allowing tutors to add guarantors, and built an approval system in the admin dashboard to verify and approve guarantor details before tutors can offer services.",
+        "Personally integrated a schedule calendar that allows users to view available time slots, track upcoming sessions, and manage their tutoring schedules with ease",
+        "Personally improved the entire booking flow of the website by optimizing the process of scheduling, rescheduling, and canceling tutoring sessions to ensure a seamless experience for  both parents and tutors.",
+        "Personally integrated the help and support chat feature, enabling parents and tutors to get real-time assistance and resolve issues efficiently.",
       ],
     },
   ];
@@ -195,6 +194,17 @@ export const AppContextProvider = ({ children }: any) => {
 
     {
       id: 1,
+      name: "IklassTutors",
+      description:
+        "Worked with a number of devs to build and maintain an education platform that connects parents with qualified tutors, enabling seamless tutor applications and bookings. Users can schedule, cancel, and manage appointments effortlessly. Built with a responsive interface, it ensures a smooth experience across devices while streamlining the tutoring process.",
+      link: "https://github.com/AlexanderOba/Iklasstutors-web",
+      live: "https://iklasstutors.vercel.app/",
+      image: "/iklass.png",
+      tech: ["Nextjs", "Tailwind", "Typescript", "MongoDb", "NodeJs"],
+    },
+
+    {
+      id: 2,
       name: "martiful",
       description:
         "Crypto website that provides a seamless way to trade or convert any crypto asset directly into Naira. With real-time exchange rates and secure transactions, it offers users a simple, efficient bridge to liquidity in Nigeria. The platform’s streamlined process ensures fast conversions, empowering users to manage digital assets easily.",
@@ -203,19 +213,20 @@ export const AppContextProvider = ({ children }: any) => {
       image: "/martiful.png",
       tech: ["Nextjs", "Tailwind", "Typescript"],
     },
-    {
-      id: 2,
-      name: "Durkio",
-      description:
-        "NFT marketplace that allows users to buy, sell, and explore digital collectibles in sepolia ETH with ease. The platform integrates blockchain technology for secure transactions and features a user-friendly design for seamless browsing and trading.",
-      link: "https://github.com/Adelani10/nftmarketplace",
-      live: "https://nft-fe-umber.vercel.app/",
-      image: "/marketplace.png",
-      tech: ["Solidity", "Tailwind", "Typescript", "Nextjs"],
-    },
 
     {
       id: 3,
+      name: "Quizzical",
+      description:
+        "An Educative quiz application. Questions & answers fetched from an external source. On submit, users can see corrections of questions failed, as well as their total score for each section.",
+      link: "https://github.com/Adelani10/quizGame",
+      live: "https://test-your-general-knowledge.netlify.app/",
+      image: "/quizup.png",
+      tech: ["React", "Tailwind"],
+    },
+
+    {
+      id: 4,
       name: "ClipFicks",
       description:
         "A full-stack video sharing app built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
@@ -233,25 +244,14 @@ export const AppContextProvider = ({ children }: any) => {
     },
 
     {
-      id: 4,
-      name: "Quizzical",
-      description:
-        "An Educative quiz application. Questions & answers fetched from an external source. On submit, users can see corrections of questions failed, as well as their total score for each section.",
-      link: "https://github.com/Adelani10/quizGame",
-      live: "https://test-your-general-knowledge.netlify.app/",
-      image: "/quizup.png",
-      tech: ["React", "Tailwind"],
-    },
-
-    {
       id: 5,
-      name: "Musica",
+      name: "Durkio",
       description:
-        "A full-stack video sharing platform built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
-      link: "https://github.com/Adelani10/musica",
-      live: "https://ab-musica.netlify.app/",
-      image: "/musica.png",
-      tech: ["React", "Tailwind"],
+        "NFT marketplace that allows users to buy, sell, and explore digital collectibles in sepolia ETH with ease. The platform integrates blockchain technology for secure transactions and features a user-friendly design for seamless browsing and trading.",
+      link: "https://github.com/Adelani10/nftmarketplace",
+      live: "https://nft-fe-umber.vercel.app/",
+      image: "/marketplace.png",
+      tech: ["Solidity", "Tailwind", "Typescript", "Nextjs"],
     },
   ];
 
