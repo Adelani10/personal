@@ -66,7 +66,7 @@ const About = () => {
             alt="Ade"
             fill
             sizes="any"
-            src={"/profile1.jpg"}
+            src={"/profile.jpg"}
             className="object-cover -translate-x-3 -translate-y-3 hover:-translate-y-5  hover:-translate-x-5 transition-all duration-300 ease-in-out h-full rounded-md"
           />
           {overlay && (
