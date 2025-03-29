@@ -205,7 +205,7 @@ export const AppContextProvider = ({ children }: any) => {
       ],
     },
     {
-      id: 2,
+      id: 1,
       name: "EventNGigs",
       description:
         "Worked with a number of devs to build and maintain the frontend of an event organizing and engagement platform that connects Organizers, Attendees and Vendors, enabling seamless events hosting and subscriptions. Users could be Organizers, Attendees and Vendors, Organizers get to create memberships, approve aspiring members and posts upcoming Events in the userfeed.",
@@ -215,7 +215,7 @@ export const AppContextProvider = ({ children }: any) => {
       tech: ["React", "Css", "Javascript", "Python", "Postgres"],
     },
     {
-      id: 3,
+      id: 2,
       name: "IklassTutors",
       description:
         "Worked with a number of devs to build and maintain an education platform that connects parents with qualified tutors, enabling seamless tutor applications and bookings. Users can schedule, cancel, and manage appointments effortlessly. Built with a responsive interface, it ensures a smooth experience across devices while streamlining the tutoring process.",
@@ -226,7 +226,7 @@ export const AppContextProvider = ({ children }: any) => {
     },
 
     {
-      id: 4,
+      id: 3,
       name: "martiful",
       description:
         "Crypto website that provides a seamless way to trade or convert any crypto asset directly into Naira. With real-time exchange rates and secure transactions, it offers users a simple, efficient bridge to liquidity in Nigeria. The platform’s streamlined process ensures fast conversions, empowering users to manage digital assets easily.",
@@ -237,7 +237,7 @@ export const AppContextProvider = ({ children }: any) => {
     },
 
     {
-      id: 5,
+      id: 4,
       name: "Quizzical",
       description:
         "An Educative quiz application. Questions & answers fetched from an external source. On submit, users can see corrections of questions failed, as well as their total score for each section.",
@@ -248,7 +248,7 @@ export const AppContextProvider = ({ children }: any) => {
     },
 
     {
-      id: 6,
+      id: 5,
       name: "ClipFicks",
       description:
         "A full-stack video sharing app built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
@@ -266,7 +266,7 @@ export const AppContextProvider = ({ children }: any) => {
     },
 
     {
-      id: 7,
+      id: 6,
       name: "Durkio",
       description:
         "NFT marketplace that allows users to buy, sell, and explore digital collectibles in sepolia ETH with ease. The platform integrates blockchain technology for secure transactions and features a user-friendly design for seamless browsing and trading.",
