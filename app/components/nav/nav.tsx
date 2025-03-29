@@ -34,7 +34,7 @@ const Nav = () => {
 
         <div className="bg-sky-300 rounded-md">
           <button
-            onClick={() => window.open("/resume.pdf", "_blank")}
+            onClick={() => window.open("/new_resume.pdf", "_blank")}
             className="border border-sky-300 p-2 px-4  text-sky-300 rounded-md bg-black hover:-translate-x-1 hover:-translate-y-1 transition-all duration-500 ease-in-out"
           >
             <a href="new_resume.pdf" download target="_blank">
