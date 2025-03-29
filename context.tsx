@@ -67,7 +67,6 @@ export const useAppContext = () => {
 };
 
 export const AppContextProvider = ({ children }: any) => {
-  const router = useRouter();
   const [showSideBar, setShowSideBar] = useState<boolean>(false);
   const navData: navDataTypes[] = [
     {
@@ -171,6 +170,20 @@ export const AppContextProvider = ({ children }: any) => {
         "Personally integrated the help and support chat feature, enabling parents and tutors to get real-time assistance and resolve issues efficiently.",
       ],
     },
+
+    {
+      id: 4,
+      name: "Openwit",
+      role: "Frontend Developer",
+      duration: "Mar 2025 - Present",
+      bulletPoints: [
+        "Developed organizer dashboard analytics, providing insights into event performance and attendee engagement",
+        "Collaborated with backend engineers to integrate analytics and membership features with the database",
+        "Implemented membership plans for organizers, allowing them to create and manage exclusive membership tiers.",
+        "Built and implemented a notification system for organizers to send updates to their members, improving engagement.",
+        "Developed advanced filtering options, enabling organizers to sort members by status and order (oldest, newest).",
+      ],
+    },
   ];
 
   const prjData: prjDataTypes[] = [
@@ -191,9 +204,18 @@ export const AppContextProvider = ({ children }: any) => {
         "Docker",
       ],
     },
-
     {
-      id: 1,
+      id: 2,
+      name: "EventNGigs",
+      description:
+        "Worked with a number of devs to build and maintain the frontend of an event organizing and engagement platform that connects Organizers, Attendees and Vendors, enabling seamless events hosting and subscriptions. Users could be Organizers, Attendees and Vendors, Organizers get to create memberships, approve aspiring members and posts upcoming Events in the userfeed.",
+      link: "https://github.com/OpenWit-Technologies/openevent-backend",
+      live: "http://eventit-sandbox.azurewebsites.net/",
+      image: "/eventngigs.png",
+      tech: ["React", "Css", "Javascript", "Python", "Postgres"],
+    },
+    {
+      id: 3,
       name: "IklassTutors",
       description:
         "Worked with a number of devs to build and maintain an education platform that connects parents with qualified tutors, enabling seamless tutor applications and bookings. Users can schedule, cancel, and manage appointments effortlessly. Built with a responsive interface, it ensures a smooth experience across devices while streamlining the tutoring process.",
@@ -204,7 +226,7 @@ export const AppContextProvider = ({ children }: any) => {
     },
 
     {
-      id: 2,
+      id: 4,
       name: "martiful",
       description:
         "Crypto website that provides a seamless way to trade or convert any crypto asset directly into Naira. With real-time exchange rates and secure transactions, it offers users a simple, efficient bridge to liquidity in Nigeria. The platform’s streamlined process ensures fast conversions, empowering users to manage digital assets easily.",
@@ -215,7 +237,7 @@ export const AppContextProvider = ({ children }: any) => {
     },
 
     {
-      id: 3,
+      id: 5,
       name: "Quizzical",
       description:
         "An Educative quiz application. Questions & answers fetched from an external source. On submit, users can see corrections of questions failed, as well as their total score for each section.",
@@ -226,7 +248,7 @@ export const AppContextProvider = ({ children }: any) => {
     },
 
     {
-      id: 4,
+      id: 6,
       name: "ClipFicks",
       description:
         "A full-stack video sharing app built with Spring Boot for the backend and React Native for the frontend. The app allows users to upload, view, and manage their video content seamlessly. Key features include: Authentication, Upload, Bookmarking, Personalized profile, responsive design",
@@ -244,7 +266,7 @@ export const AppContextProvider = ({ children }: any) => {
     },
 
     {
-      id: 5,
+      id: 7,
       name: "Durkio",
       description:
         "NFT marketplace that allows users to buy, sell, and explore digital collectibles in sepolia ETH with ease. The platform integrates blockchain technology for secure transactions and features a user-friendly design for seamless browsing and trading.",

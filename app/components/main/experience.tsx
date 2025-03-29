@@ -32,7 +32,7 @@ const Experience = () => {
               <div
                 key={job.id}
                 onClick={() => setIndex(job.id)}
-                className={`text-sky-300 py-2 px-5 w-24 md:w-full text-center ${
+                className={`text-sky-300 py-2 px-5 w-24 md:w-full text-center md:text-left md:text-sm ${
                   index === job.id
                     ? "border-sky-300  bg-gray-800"
                     : "border-gray-500"
